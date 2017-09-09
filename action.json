@@ -1,0 +1,26 @@
+{
+	"actions": [
+      {
+        "description": "Default Welcome Intent",
+        "name": "MAIN",
+        "fulfillment": {
+          "conversationName": "fireFulfill"
+        },
+        "intent": {
+          "name": "actions.intent.MAIN",
+          "trigger": {
+            "queryPatterns": [
+              "talk to joseph's test app"
+            ]
+          }
+        }
+      }
+    ],
+    "conversations": {
+      "fireFulfill": {
+        "name": "fireFulfill",
+        "url": "https://us-central1-test-26fd1.cloudfunctions.net/helloWorld"
+      }
+    }
+
+}
