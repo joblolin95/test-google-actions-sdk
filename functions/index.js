@@ -22,8 +22,16 @@ exports.helloWorld = functions.https.onRequest((req, res) => {
         break;
 
       case app.StandardIntents.TEXT:
-        let number = app.getArgument(NUMBER_ARGUMENT);
-        app.tell('You said ' + number);
+        // let number = app.getArgument(NUMBER_ARGUMENT);
+        // app.tell('You said ' + number);
+        if (app.getRawInput() === 'bye') {
+          app.tell('Goodbye!');
+        } else {
+        const inputPrompt = app.buildInputPrompt(true, '<speak>You said, <say-as interpret-as="ordinal">' +
+                                app.getRawInput() + '</say-as></speak>',
+                                ['I didn\'t hear a number', 'If you\'re still there, what\'s the number?', 'What is the number?']);
+        app.ask(inputPrompt);
+        }
         break;
     }
   }
@@ -31,26 +39,3 @@ exports.helloWorld = functions.https.onRequest((req, res) => {
   // you can add the function name instead of an action map
   app.handleRequest(responseHandler);
 });
-
-exports.talkToOlin = (req, res) => {
-  const app = new ActionsSdkApp({request: req, response: res});
-
-  // Create functions to handle requests here
-   function responseHandler (app) {
-  	// intent contains the name of the intent you defined in `initialTriggers`
-  	let intent = app.getIntent();
-  	switch (intent) {
-    	case app.StandardIntents.MAIN:
-      	app.ask('Welcome! Say a number.');
-      	break;
-
-    	case app.StandardIntents.TEXT:
-      	let number = app.getArgument(NUMBER_ARGUMENT);
-      	app.tell('You said ' + number);
-      	break;
-    }
-  }
-	
-	// you can add the function name instead of an action map
-	app.handleRequest(responseHandler);
-}
