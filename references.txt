@@ -1,0 +1,4 @@
+https://developers.google.com/actions/sdk/
+
+https://medium.com/google-cloud/building-your-first-action-for-google-home-in-30-minutes-ec6c65b7bd32
+
