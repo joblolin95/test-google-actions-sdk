@@ -1,0 +1,56 @@
+[
+{
+  "id" : 0,
+  "difficulty" : "easy",
+  "questions" : [
+    {
+      "id" : 0,
+      "type" : 0,
+      "text" : "You need to say true to this question. True or false?",
+      "answers" : ["true", "false", "", ""],
+      "correctAnswer" : 0
+    },
+    {
+      "id" : 1,
+      "type" : 0,
+      "text" : "You need to say false to this question. True or false?",
+      "answers" : ["true", "false", "", ""],
+      "correctAnswer" : 1
+    },
+    {
+      "id" : 2,
+      "type" : 1,
+      "text" : "c is the correct answer. Whatshould you pick?",
+      "answers" : ["Answer one", "Answer two", "Answer three", "Answer four"],
+      "correctAnswer" : 2
+    }
+  ]
+},
+{
+  "id" : 1,
+  "difficulty" : "hard",
+  "questions" : [
+    {
+      "id" : 0,
+      "type" : 0,
+      "text" : "You need to say true to this question. True or false?",
+      "answers" : ["true", "false", "", ""],
+      "correctAnswer" : 0
+    },
+    {
+      "id" : 1,
+      "type" : 0,
+      "text" : "You need to say false to this question. True or false?",
+      "answers" : ["true", "false", "", ""],
+      "correctAnswer" : 1
+    },
+    {
+      "id" : 2,
+      "type" : 1,
+      "text" : "D is the correct answer. Whatshould you pick?",
+      "answers" : ["Answer one", "Answer two", "Answer three", "Answer four"],
+      "correctAnswer" : 3
+    }
+  ]
+}
+]
